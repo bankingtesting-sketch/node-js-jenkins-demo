@@ -2,6 +2,11 @@ pipeline {
 
     agent any
 
+    tools {
+        nodejs 'Node22'
+    }
+
+
     stages {
 
         stage('Install') {
