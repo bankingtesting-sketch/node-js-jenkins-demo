@@ -4,32 +4,14 @@ pipeline {
 
     stages {
 
-        stage('Install') {
+        stage('Build Docker Image') {
 
             steps {
 
-                sh 'npm install'
-
-            }
-
-        }
-
-        stage('Test') {
-
-            steps {
-
-                sh 'npm test'
-
-            }
-
-        }
-
-        stage('Build') {
-
-            steps {
-
-                sh 'npm run build'
-
+                sh '''
+                docker build \
+                -t node-demo:v1 .
+                '''
             }
 
         }
