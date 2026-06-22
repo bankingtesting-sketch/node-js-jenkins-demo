@@ -1,7 +1,11 @@
-function add(a, b) {
-  return a + b;
-}
+const http = require('http');
 
-console.log(add(10, 20));
+http.createServer((req,res)=>{
 
-module.exports = { add };
+    res.write('Hello Docker Jenkins');
+
+    res.end();
+
+}).listen(3000);
+
+console.log('Running on port 3000');
