@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "build": "echo Building Application"
+    "build":"mkdir -p dist && echo Build Complete > dist/build.txt",
   
 },
   "keywords": [],
